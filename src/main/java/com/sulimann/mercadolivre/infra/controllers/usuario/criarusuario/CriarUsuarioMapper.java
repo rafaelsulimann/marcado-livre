@@ -5,14 +5,14 @@ import java.time.ZoneId;
 
 import org.springframework.stereotype.Component;
 
+import com.sulimann.mercadolivre.core.usecases.usuario.criarusuario.ICriarUsuarioMapper;
 import com.sulimann.mercadolivre.core.usecases.usuario.criarusuario.ICriarUsuarioRequest;
 import com.sulimann.mercadolivre.core.usecases.usuario.criarusuario.ICriarUsuarioResponse;
-import com.sulimann.mercadolivre.core.utils.IMapper;
 import com.sulimann.mercadolivre.domain.enums.TipoUsuario;
 import com.sulimann.mercadolivre.infra.entities.UsuarioEntity;
 
 @Component
-public class CriarUsuarioMapper implements IMapper<UsuarioEntity, ICriarUsuarioRequest, ICriarUsuarioResponse>{
+public class CriarUsuarioMapper implements ICriarUsuarioMapper<UsuarioEntity>{
 
   @Override
   public UsuarioEntity toEntity(ICriarUsuarioRequest request) {
