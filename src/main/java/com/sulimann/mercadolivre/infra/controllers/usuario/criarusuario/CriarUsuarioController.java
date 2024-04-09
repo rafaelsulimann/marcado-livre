@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sulimann.mercadolivre.core.constants.Path;
-import com.sulimann.mercadolivre.core.usecases.usuario.criarusuario.CriarUsuarioUseCase;
 import com.sulimann.mercadolivre.core.usecases.usuario.criarusuario.ICriarUsuarioResponse;
 
 import jakarta.transaction.Transactional;
@@ -18,7 +17,7 @@ import jakarta.validation.Valid;
 @RequestMapping(value = Path.USUARIO)
 public class CriarUsuarioController {
 
-  private final CriarUsuarioUseCase service;
+  private CriarUsuarioUseCase service;
 
   public CriarUsuarioController(CriarUsuarioUseCase service) {
     this.service = service;
